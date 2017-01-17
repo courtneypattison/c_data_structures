@@ -1,8 +1,8 @@
 objdir = obj/
 
-program = doubly_linked_list
+program = dl_list
 
-sources = main.c doubly_linked_list.c
+sources = main.c dl_list.c
 
 objects = $(patsubst %.c,$(objdir)%.o,$(sources))
 
