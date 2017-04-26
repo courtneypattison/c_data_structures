@@ -6,7 +6,7 @@ sources = main.c dl_list.c
 
 objects = $(patsubst %.c,$(objdir)%.o,$(sources))
 
-CFLAGS = -Wall -std=c99 -Iinclude -pedantic -g
+CFLAGS = -Wall -ansi -Iinclude -pedantic -g
 VPATH = include:src
 
 all : $(program)
