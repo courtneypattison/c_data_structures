@@ -1,23 +1,13 @@
-objdir = obj/
-
 program = dl_list
-
-sources = main.c dl_list.c
-
-objects = $(patsubst %.c,$(objdir)%.o,$(sources))
+objects = main.o dl_list.o
 
 CFLAGS = -Wall -ansi -Iinclude -pedantic -g
 VPATH = include:src
 
-all : $(program)
-
 $(program) : $(objects)
-	@mkdir -p $(@D)
 	$(CC) $(CFLAGS) -o $(program) $(objects)
 
-$(objdir)%.o : %.c
-	@mkdir -p $(@D)
-	$(CC) $(CFLAGS) -c -o $@ $<
+$(objects) : dl_list.h
 
 .PHONY : clean
 clean :
