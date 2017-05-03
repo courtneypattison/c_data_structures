@@ -28,9 +28,12 @@
 *.x86_64
 *.hex
 
+dl_list
+
 # Debug files
 *.dSYM/
 *.su
 
 # Mac OS
 .DS_Store
+
