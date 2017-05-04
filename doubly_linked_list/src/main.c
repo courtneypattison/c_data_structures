@@ -64,13 +64,36 @@ int main(void)
         printf("%d ", i);
     }
 
+    printf("\n\ninsert_data_end()\n"
+               "-----------------\n");
+    j = malloc(sizeof *j);
+    *j = 10;
+    insert_data_end(list, j);
+    printf("actual:   ");
+    traverse_forward(list, print_int);
+    printf("\n");
+    printf("expected: ");
+    for (i = -1; i < TEST_LEN + 1; i++) {
+        printf("%d ", i);
+    }
+
+    printf("\n\ntraverse_forward()\n"
+               "------------------\n");
+    printf("actual:   ");
+    traverse_forward(list, print_int);
+    printf("\n");
+    printf("expected: ");
+    for (i = -1; i < TEST_LEN + 1; i++) {
+        printf("%d ", i);
+    }
+
     printf("\n\ntraverse_backward()\n"
                "-------------------\n");
     printf("actual:   ");
     traverse_backward(list, print_int);
     printf("\n");
     printf("expected: ");
-    for (i = TEST_LEN - 1; i >= -1; i--) {
+    for (i = TEST_LEN; i >= -1; i--) {
         printf("%d ", i);
     }
 
@@ -109,10 +132,42 @@ int main(void)
         printf("%d ", i);
     }
     printf("2 ");
-    for (i = 6; i < TEST_LEN; i++) {
+    for (i = 6; i < TEST_LEN + 1; i++) {
         printf("%d ", i);
     }
+
+    printf("\n\ninsert_data_before()\n"
+               "-------------------\n");
+    l = malloc(sizeof *l);
+    *l = 2;
+    node1 = insert_data_before(list, node, l);
+    printf("actual:   ");
+    traverse_forward(list, print_int);
     printf("\n");
+    printf("expected: ");
+    for (i = -1; i < 5; i++) {
+        printf("%d ", i);
+    }
+    printf("2 5 2 ");
+    for (i = 6; i < TEST_LEN + 1; i++) {
+        printf("%d ", i);
+    }
+
+    printf("\n\nremove_node()\n"
+               "-------------------\n");
+    free(node->data);
+    remove_node(list, node);
+    printf("actual:   ");
+    traverse_forward(list, print_int);
+    printf("\n");
+    printf("expected: ");
+    for (i = -1; i < 5; i++) {
+        printf("%d ", i);
+    }
+    printf("2 2 ");
+    for (i = 6; i < TEST_LEN + 1; i++) {
+        printf("%d ", i);
+    }
 
     traverse_forward(list, free);
 
