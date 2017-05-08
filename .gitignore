@@ -29,6 +29,7 @@
 *.hex
 
 dl_list
+list
 
 # Debug files
 *.dSYM/
