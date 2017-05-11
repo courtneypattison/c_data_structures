@@ -28,8 +28,9 @@
 *.x86_64
 *.hex
 
-dl_list
-list
+doubly_linked_list/dl_list
+singly_linked_list/list
+queue/queue
 
 # Debug files
 *.dSYM/
