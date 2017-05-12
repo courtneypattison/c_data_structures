@@ -32,6 +32,7 @@ doubly_linked_list/dl_list
 singly_linked_list/list
 queue/queue
 hash_table/hash_table
+stack/stack
 
 # Debug files
 *.dSYM/
