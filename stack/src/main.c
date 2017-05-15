@@ -1,9 +1,3 @@
-/*
- * Courtney Bodi
- * CIS2520 A1
- * Last modified: June 10, 2016
- */
-
 #include <stdio.h>
 #include <stdlib.h>
 
