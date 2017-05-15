@@ -1,8 +1,3 @@
-/*
- * Courtney Bodi
- * 0687517
- */
-
 #ifndef __QUEUE__
 #define __QUEUE__
 
